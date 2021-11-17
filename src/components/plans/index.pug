@@ -1,0 +1,61 @@
+.plans
+    -
+        var plans = [
+            {
+                link: "#introduction",
+                title: "Introduction",
+                price: "$3900 ",
+                txt: "The Introduction Website development for your business is necessary. It allows your brand to be promoted and recognized on the Internet, increases company awareness, and forms a positive reaction towards your name. Introduction Website is a petite web resource that frequently contains the following pages:",
+                list: [
+                    "message about the company, its history, and advantages",
+                    "summary of the main services or products",
+                    "graphic presentation",
+                    "details and contacts",
+                    "promotional offers",
+                    "It generally increases the interaction with the public through callback forms, order forms, chat with a company representative, and other services aiming at better communication with clients."
+                ]
+            },
+            {
+                link: "#corporate",
+                title: "Corporate",
+                price: "$5900",
+                txt: "Corporate website development starts from $5900 and includes the following advantages:",
+                list: [
+                    "Adaptive presentation to be displayed on smartphones and tablets",
+                    "tSpeed and responsiveness",
+                    "Aggregation of traffic function that helps to combine more than 14 advertising channels for the best product search and sales boost from your site",
+                    "Turnkey administration and operations convenience of the site allows for editing content without special skills",
+                    "Guarantee and insured of professional indemnity and public liability (subject of insurance contract and product delivery consent)",
+                ]
+            },
+            {
+                link: "#landing",
+                title: "Landing",
+                price: "$7900",
+                txt: "Ladning website development starts from $7900 and includes the following advantages:",
+                list: [
+                    "Adaptive presentation to be displayed on smartphones and tablets",
+                    "Speed and responsiveness",
+                    "Aggregation of traffic function that helps to combine more than 14 advertising channels for the best product search and sales boost from your site",
+                    "Turnkey administration and operations convenience of the site allows for editing content without special skills",
+                    "Guarantee and insured of professional indemnity and public liability (subject of insurance contract and product delivery consent)",
+                ]
+            },
+            {
+                link: "#ecommerce",
+                title: "eCommerce",
+                price: "$10800",
+                txt: "eCommerce website development starts from $10800 and includes the following advantages:",
+                list: [
+                    "Adaptive presentation to be displayed on smartphones and tablets",
+                    "Speed and responsiveness",
+                    "Aggregation of traffic function that helps to combine more than 14 advertising channels for the best product search and sales boost from your site",
+                    "Turnkey administration and operations convenience of the site allows for editing content without special skills",
+                    "Guarantee and insured of professional indemnity and public liability (subject of insurance contract and product delivery consent)"
+                ]
+            },
+
+        ];
+    each i,x in plans
+        div(class="plans__item"+(x+1)).plans__item
+            include item/index

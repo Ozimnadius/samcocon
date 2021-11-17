@@ -1,10 +1,16 @@
-$font: 'Roboto', Arial, sans-serif;
+$font: 'Montserrat', Arial, sans-serif;
 
-$txt: #202020;
-$bg: #ffffff;
-$link: #e7511c;
-$gold: #bfa058;
+$white: #ffffff;
+$blue: #2798d8;
+$txt: #e0e0e0;
+$yellow: #ffb800;
+$bg: #060811;
+$black: #000000;
 
 
 $font-size: 16px;
 $transition: 0.3s;
+
+:root{
+  --margin-left: 300px;
+}

@@ -1,0 +1,12 @@
+form(action='/php/ajax.php' method="POST" data-action="validate" data-reset="true" data-success-form="formThanks").sign.jsAction
+    .sign__txt Phone: 0423 594 858 or fill out the following form
+    .sign__fields
+        .sign__field
+            input(type="text" name="name" placeholder="Name" data-rule-required="true" data-msg-required="Name").input
+        .sign__field
+            input(type="email" name="email" placeholder="Email" data-rule-required="true" data-msg-required="Email").input
+        .sign__field
+            textarea(name="msg" placeholder="Message").input.input--area
+    .sign__agree
+        include ../agree/index
+    button(type='submit').sign__submit.btn3 submit

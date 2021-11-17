@@ -1,0 +1,44 @@
+.solution
+    .container
+        div(
+            data-animation="fromTo"
+            data-from='{"x":"-100%"}'
+            data-to='{"x":"0"}'
+            data-start="top 50%"
+            data-end="-120px top"
+            data-trigger=".solution"
+        ).solution__statue.jsAnimate
+            img(src="/images/content/solution/statue.png" alt="lorem")
+        div(
+            data-animation="fromTo"
+            data-from='{"x":"100%"}'
+            data-to='{"x":"0"}'
+            data-start="top bottom"
+            data-end="-120px top"
+            data-trigger=".solution"
+        ).solution__zeus.jsAnimate
+            include ../zeus/index
+        .solution__wrap
+            div(
+                data-animation="fromTo"
+                data-from='{"opacity":"0","y":"100"}'
+                data-to='{"opacity":"1","y":"0"}'
+                data-start="top 50%"
+                data-end="-120px top"
+                data-trigger=".solution").title.solution__title.jsAnimate
+                .title__txt.solution__title-txt
+                    |Turnkey solution
+                    br
+                    |basic plans
+                div(
+                    data-animation="fromTo"
+                    data-from='{"opacity":"0","x":"-50%"}'
+                    data-to='{"opacity":"1","x":"0"}'
+                    data-start="200px 50%"
+                    data-end="300px 50%"
+                    data-trigger=".solution"
+                ).title__line.line.line--back.solution__title-line.jsAnimate
+            .solution__plans
+                include ../plans/index
+
+

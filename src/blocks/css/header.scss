@@ -1,0 +1,93 @@
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include xlg-block {
+    position: fixed;
+    background: linear-gradient(0deg, rgba(6, 8, 17, 0) 0%, #000000 66.52%);
+  }
+
+  .container {
+    @media (max-width: 1919.98px) {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 40px;
+    }
+    @include lg-block {
+      padding: 0 20px;
+    }
+    @include sm-block{
+      padding: 0 10px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    @include xlg-block {
+      padding: 30px 0;
+    }
+    @include lg-block {
+      padding: 20px 0;
+    }
+    @include sm-block{
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    gap: 30px;
+    align-items: center;
+    @media (max-width: 1919.98px) {
+      display: flex;
+    }
+    @include sm-block{
+      width: 100%;
+    }
+
+    &-mmenu{
+      padding: 10px;
+      margin: -10px;
+    }
+  }
+
+  &__countries {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+
+  &__country {
+
+    &:nth-child(2) {
+      .country {
+        &__drop {
+          @include lg-block {
+            left: initial;
+            right: 0;
+          }
+
+          &:before{
+            @include lg-block{
+              left: initial;
+              right: 8px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  &__right {
+    @include lg-block {
+      display: none;
+    }
+  }
+}

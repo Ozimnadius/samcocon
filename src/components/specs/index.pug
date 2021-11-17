@@ -1,0 +1,65 @@
+.specs
+    .specs__bg
+        img(src="/images/content/specs/bg.png" alt="lorem")
+    .container
+        div(
+            data-animation="fromTo"
+            data-from='{"opacity":"0","y":"100"}'
+            data-to='{"opacity":"1","y":"0"}'
+            data-start="top 70%"
+            data-end="200px 70%"
+            data-trigger=".specs"
+        ).specs__title.title.jsAnimate
+            .title__txt.specs__title-txt Specialisations
+            div(
+                data-animation="fromTo"
+                data-from='{"opacity":"0","x":"-50%"}'
+                data-to='{"opacity":"1","x":"0"}'
+                data-start="100px 70%"
+                data-end="300px 70%"
+                data-trigger=".specs"
+            ).title__line.specs__title-line.line.line--back.jsAnimate
+        div(
+            data-animation="fromTo"
+            data-from='{"opacity":"0","y":"200"}'
+            data-to='{"opacity":"1","y":"0"}'
+            data-start="200px 70%"
+            data-end="400px 70%"
+            data-trigger=".specs"
+        ).specs__list.jsAnimate
+            -
+                var list = [
+                    {
+                        link:"#",
+                        name:"Website Development:"
+                    },
+                    {
+                        link:"#",
+                        name:"eCommerce Application Development:"
+                    },
+                    {
+                        link:"#",
+                        name:"Advanced Web, Cloud & SAAS based development:"
+                    },
+                    {
+                        link:"#",
+                        name:"Web Development:"
+                    },
+                    {
+                        link:"#",
+                        name:"Mobile Apps graphic design:"
+                    },
+                    {
+                        link:"#",
+                        name:"Web application quality control and quality assurance:"
+                    }
+                ];
+            each i in list
+                .specs__item
+                    .specs__name!=i.name
+                    a(href=i.link).specs__link.link.inactive
+                        span MORE DETAILS
+                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.36328 3.12671V4.12237H7.55844L1.93903 9.89225L2.62266 10.5942L8.24208 4.82432V8.10503H9.21178V3.12671H4.36328Z" fill="#2798D8"/>
+                        </svg>
+

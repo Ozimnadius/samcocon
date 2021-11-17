@@ -1,0 +1,16 @@
+.spark-planet{
+  position: relative;
+
+  &__img{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__star{
+    position: absolute;
+    z-index: 3;
+    top: -16px;
+    right: 51px;
+    opacity: 0;
+  }
+}

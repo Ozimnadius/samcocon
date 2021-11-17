@@ -1,0 +1,354 @@
+.info {
+  background-image: linear-gradient(242.11deg, #204972 0%, $black 100%);
+  width: 100%;
+  min-height: 100%;
+  padding: 65px 150px 150px 80px;
+
+  @media (max-width: 1919.98px) {
+    padding: 120px 0 0;
+    background: linear-gradient(to right, rgba(26, 59, 91, 1) 0%, rgba(31, 72, 112, 1) 100%);
+  }
+  @include lg-block {
+    padding: 60px 40px;
+    background-image: linear-gradient(242.11deg, #204972 0%, $black 100%);
+  }
+  @include sm-block {
+    padding: 50px 15px;
+  }
+
+
+  .fancybox-button {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 15px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-gap: 140px;
+    @media (max-width: 1919.98px) {
+      grid-template-columns: 100%;
+      grid-gap: 0;
+    }
+  }
+
+  &__left {
+    @media (max-width: 1919.98px) {
+      padding-right: 50px;
+      border-bottom: 1px solid #9b9b9b;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to right, rgba(26, 59, 91, 1) 0%, rgba(31, 72, 112, 1) 100%);
+    }
+    @include lg-block {
+      display: none;
+    }
+  }
+
+  &__links {
+    @media (max-width: 1919.98px) {
+      display: flex;
+      margin: 0 -40px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    justify-content: space-between;
+    padding: 19px 0;
+    border-bottom: 1px solid #3a3a3a;
+    @media (max-width: 1919.98px) {
+      padding: 20px 80px;
+      position: relative;
+    }
+
+    &:hover, &.active {
+      span {
+        color: $yellow;
+      }
+    }
+
+    &.active {
+      span {
+        color: $blue;
+        transform: translateX(10px);
+        @media (max-width: 1919.98px) {
+          transform: none;
+        }
+      }
+
+      svg {
+        opacity: 1;
+        transform: translateX(-10px);
+
+        @media (max-width: 1919.98px) {
+          transform: translateX(10px) translateY(-50%) rotate(90deg);
+        }
+      }
+    }
+
+    span {
+      color: $txt;
+      @include tr;
+    }
+
+    svg {
+      opacity: 0;
+      @include tr;
+      @media (max-width: 1919.98px) {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__right {
+    @media (max-width: 1919.98px) {
+      padding: 0 40px 100px;
+    }
+    @include lg-block {
+      padding: 0;
+    }
+  }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    @include lg-block {
+      margin-bottom: 40px;
+    }
+    @include sm-block {
+      font-size: 22px;
+    }
+
+    &:after {
+      margin-top: 50px;
+      content: '';
+      display: block;
+      width: 299px;
+      height: 2px;
+      background-image: linear-gradient(-90deg, rgba($blue, 0) 0%, $blue 100%);
+      @include lg-block {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &__content {
+    color: $white;
+    margin-bottom: 50px;
+    font-size: 18px;
+
+    @media (max-width: 1919.98px) {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+
+      tr {
+        @include sm-block {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+
+      th {
+        font-size: 26px;
+        font-weight: 600;
+        padding: 0 35px 35px;
+        white-space: nowrap;
+        @include lg-block {
+          font-size: 20px;
+          padding: 0 25px 20px;
+        }
+        @include sm-block {
+          width: 50%;
+          padding: 0 0 25px;
+        }
+
+        &:first-child {
+          @include sm-block {
+            display: none;
+          }
+        }
+
+      }
+
+      td {
+        padding: 15px 35px;
+        font-size: 18px;
+        @include lg-block {
+          font-size: 16px;
+          padding: 15px 20px;
+        }
+        @include sm-block {
+          width: 50%;
+        }
+
+        &:first-child {
+          @include sm-block {
+            width: 100%;
+          }
+        }
+
+        b {
+          font-weight: 600;
+        }
+      }
+
+      td, th {
+        text-align: center;
+        border-bottom: 1px solid rgba(#9b9b9b, .5);
+
+        &:first-child {
+          padding-left: 0;
+          text-align: left;
+          @include sm-block {
+            text-align: center;
+            padding: 15px 20px;
+          }
+        }
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+    }
+
+    p {
+      margin: 25px 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 60px;
+      margin-bottom: 25px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+  }
+
+}
+
+.info-cost {
+  display: flex;
+  align-items: baseline;
+  @include sm-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__left {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @include sm-block {
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    color: $white;
+    font-size: 48px;
+    font-weight: 500;
+  }
+
+  &__prices {
+    display: flex;
+    gap: 70px;
+    @include lg-block {
+      gap: 15px;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 70px;
+    @include lg-block {
+      gap: 30px 70px;
+    }
+    @include sm-block{
+        gap: 20px;
+    }
+  }
+
+  &__col {
+    &:first-child {
+      @include lg-block {
+        width: 100%;
+      }
+    }
+  }
+
+  &__link {
+    @include sm-block {
+      display: none;
+    }
+  }
+
+}
+
+.info-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  @include lg-block {
+    gap: 15px;
+  }
+
+  &--2 {
+    gap: 2px;
+    align-items: flex-start;
+  }
+
+  &__val {
+    color: $white;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__btn{
+    @include sm-block{
+      width: 100%;
+      height: auto;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+
+}

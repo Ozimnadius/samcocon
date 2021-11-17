@@ -1,0 +1,51 @@
+footer.footer
+    .container
+        .footer__top
+            .footer__title.title
+                .title__txt Contacts
+                .title__line.line.line--back
+            .footer__grid
+                .footer__col
+                    .footer__sub Inquiries
+                    include ../../components/sign/index
+                .footer__col
+                    .footer__sub Contacts
+                    .footer__countries
+                        -
+                            var list = [
+                                {
+                                    src: "/images/content/countries/canada.svg",
+                                    name: "Canada",
+                                    content: "<ul>" +
+                                            "<li><b>Corporation Number:</b> 1096326-7</li>" +
+                                            "<li><b>Business Number:</b> 735837718RC0001</li>" +
+                                            "<li><b>Address:</b> 2967 Dundas Street West, Toronto, Ontario Canada M6P 1Z2</li>" +
+                                            "<li><b>Phone:</b> 1.833.EPCOTEC (372.6832)</li>" +
+                                            "</ul>"
+                                },
+                                {
+                                    src: "/images/content/countries/australia.svg",
+                                    name: "Australia",
+                                    content: "<p>In Australia, Epcotec is operated under Epcotec Ltd business licenses</p>" +
+                                            "<p><b>Canberra address:</b> M Centre, 11 Palmerston Lane, Suite #1100, Manuka, ACT 2603</p>" +
+                                            "<p><b>Sydney Address:</b> Level 33 Australia Square, 264 George Street, Sydney, NSW 2000</p>" +
+                                            "<p><b>Tollfree:</b> 1.800.243.731</p>"
+                                },
+
+                            ];
+                        each  i in list
+                            .footer__country
+                                include ../../components/country/index
+                .footer__col
+                    .footer__sub Adopted legislations:
+                    ul.footer__ul
+                        li Workplace Gender Equality Act 2012
+                        li Fair Work Act 2009
+                        li Long Service Leave (Portable Schemes) Act 2009
+                        li Paid Parental Leave Act 2010
+                        li Work Health and Safety Act 2011
+                        li Workers Compensation Act 1951
+        .footer__bottom
+            .footer__copy © 2021 Epcotec Ltd.
+            .footer__policy.
+                <a class="inactive" href="/">Terms of Service</a> and <a class="inactive" href="/">Privacy Policy</a>

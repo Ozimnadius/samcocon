@@ -1,0 +1,165 @@
+#info
+    .info
+        .info__grid.jsTabs
+            .info__left
+                -
+                    var links = [
+                        {
+                            href: "#introduction",
+                            name: "Introduction"
+                        },
+                        {
+                            href: "#corporate",
+                            name: "Corporate"
+                        },
+                        {
+                            href: "#landing",
+                            name: "Landing"
+                        },
+                        {
+                            href: "#ecommerce",
+                            name: "eCommerce"
+                        }
+                    ]
+                .info__links
+                    each i in links
+                        a(href=i.href).info__link.jsTabs__btn
+                            span= i.name
+                            <svg width="32" height="16" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.2022 8.57674C31.5928 8.18621 31.5928 7.55305 31.2022 7.16252L24.8383 0.798563C24.4477 0.408039 23.8146 0.408039 23.4241 0.798563C23.0335 1.18909 23.0335 1.82225 23.4241 2.21278L29.0809 7.86963L23.4241 13.5265C23.0335 13.917 23.0335 14.5502 23.4241 14.9407C23.8146 15.3312 24.4477 15.3312 24.8383 14.9407L31.2022 8.57674ZM0.495117 8.86963L30.4951 8.86963L30.4951 6.86963L0.495117 6.86963L0.495117 8.86963Z" fill="#2798D8"/>
+                            </svg>
+            .info__right
+                .info__tabs
+                    #introduction.info__tab.jsTabs__tab
+                        .info__title Introduction website
+                        .info__content
+                            include introduction
+                        .info__cost
+                            .info-cost
+                                .info-cost__left
+                                    .info-cost__name Cost:
+                                    a(href="#").info-cost__link.link.inactive
+                                        span MORE DETAILS
+                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.35101 2.48907V3.48474H8.54617L2.92676 9.25462L3.6104 9.95656L9.22981 4.18668V7.4674H10.1995V2.48907H5.35101Z" fill="#2798D8"/>
+                                        </svg>
+                                .info-cost__right
+                                    .info-cost__prices
+                                        .info-cost__price
+                                            .info-price
+                                                .info-price__val $3900
+                                                button(type='button'
+                                                    data-action="openForm"
+                                                    data-form="formConsultation"
+                                                    data-success-form="formThanks"
+                                                    data-msg="Choosed plan\n" +
+                                                    "Introduction website\n" +
+                                                    "Premier plan\n" +
+                                                    "Cost: $3900").info-price__btn.btn2.jsAction Choose Premier
+                                        .info-cost__price
+                                            .info-price
+                                                .info-price__val $6800
+                                                button(type='button'
+                                                    data-action="openForm"
+                                                    data-form="formConsultation"
+                                                    data-success-form="formThanks"
+                                                    data-msg="Choosed plan\n" +
+                                                    "Introduction website\n" +
+                                                    "Platinum plan\n" +
+                                                    "Cost: $6800").info-price__btn.btn2.jsAction Choose Platinum
+
+                    #corporate.info__tab.jsTabs__tab
+                        .info__title Corporate website development
+                        .info__content
+                            include corporate
+                        .info__cost
+                            .info-cost
+                                .info-cost__grid
+                                    .info-cost__col
+                                        .info-cost__name Cost:
+                                    .info-cost__col
+                                        .info-price.info-price--2
+                                            .info-price__from from
+                                            .info-price__val $5900
+                                    .info-cost__col
+                                        button(type='button'
+                                            data-action="openForm"
+                                            data-form="formConsultation"
+                                            data-success-form="formThanks"
+                                            data-msg="Choosed plan\n" +
+                                            "Corporate website development\n" +
+                                            "Cost: $5900").info-price__btn.btn2.jsAction Get consultation
+                                    .info-cost__col
+                                        a(href="#").info-cost__link.link.inactive
+                                            span MORE DETAILS
+                                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.35101 2.48907V3.48474H8.54617L2.92676 9.25462L3.6104 9.95656L9.22981 4.18668V7.4674H10.1995V2.48907H5.35101Z" fill="#2798D8"/>
+                                            </svg>
+
+                    #landing.info__tab.jsTabs__tab
+                        .info__title Introduction website
+                        .info__content
+                            include landing
+                        .info__cost
+                            .info-cost
+                                .info-cost__left
+                                    .info-cost__name Cost:
+                                    a(href="#").info-cost__link.link.inactive
+                                        span MORE DETAILS
+                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.35101 2.48907V3.48474H8.54617L2.92676 9.25462L3.6104 9.95656L9.22981 4.18668V7.4674H10.1995V2.48907H5.35101Z" fill="#2798D8"/>
+                                        </svg>
+                                .info-cost__right
+                                    .info-cost__prices
+                                        .info-cost__price
+                                            .info-price
+                                                .info-price__val $7900
+                                                button(type='button'
+                                                    data-action="openForm"
+                                                    data-form="formConsultation"
+                                                    data-success-form="formThanks"
+                                                    data-msg="Choosed plan\n" +
+                                                    "Landing\n" +
+                                                    "Premier plan\n" +
+                                                    "Cost: $7900").info-price__btn.btn2.jsAction Choose Premier
+                                        .info-cost__price
+                                            .info-price
+                                                .info-price__val $12900
+                                                button(type='button'
+                                                    data-action="openForm"
+                                                    data-form="formConsultation"
+                                                    data-success-form="formThanks"
+                                                    data-msg="Choosed plan\n" +
+                                                    "Landing\n" +
+                                                    "Platinum plan\n" +
+                                                    "Cost: $12900").info-price__btn.btn2.jsAction Choose Platinum
+                    #ecommerce.info__tab.jsTabs__tab
+                        .info__title eCommerce website development
+                        .info__content
+                            include ecommerce
+                        .info__cost
+                            .info-cost
+                                .info-cost__grid
+                                    .info-cost__col
+                                        .info-cost__name Cost:
+                                    .info-cost__col
+                                        .info-price.info-price--2
+                                            .info-price__from from
+                                            .info-price__val $5900
+                                    .info-cost__col
+                                        button(type='button'
+                                            data-action="openForm"
+                                            data-form="formConsultation"
+                                            data-success-form="formThanks"
+                                            data-msg="Choosed plan\n" +
+                                            "eCommerce website development\n" +
+                                            "Cost: $5900").info-price__btn.btn2.jsAction Get consultation
+                                    .info-cost__col
+                                        a(href="#").info-cost__link.link.inactive
+                                            span MORE DETAILS
+                                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.35101 2.48907V3.48474H8.54617L2.92676 9.25462L3.6104 9.95656L9.22981 4.18668V7.4674H10.1995V2.48907H5.35101Z" fill="#2798D8"/>
+                                            </svg>
+
+
+

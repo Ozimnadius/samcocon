@@ -1,0 +1,71 @@
+.solution{
+  background-image: url(/images/content/solution/bg.png);
+  background-position: 0 top;
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-bottom: 200px;
+  position: relative;
+  @include xlg-block{
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  @include lg-block{
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+  @include sm-block{
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  &__statue{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    @include xlg-block{
+      top: initial;
+      bottom: 0;
+    }
+    @include sm-block{
+      bottom: 110px;
+    }
+  }
+
+  &__zeus{
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include xlg-block{
+      right: -100px;
+      top: 130px;
+    }
+    @include lg-block{
+      top: -20px;
+      right: -260px;
+    }
+    @include sm-block{
+      top: 25px;
+      right: -250px;
+    }
+  }
+
+  &__wrap{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title{
+    margin-bottom: 50px;
+    @include xlg-block{
+      margin-bottom: 80px;
+    }
+    @include lg-block{
+      margin-bottom: 50px;
+    }
+    @include sm-block{
+      margin-bottom: 160px;
+    }
+  }
+
+}

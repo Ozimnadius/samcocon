@@ -1,0 +1,27 @@
+#formConsultation
+    form(action="/php/ajax.php" method="post" ).form
+        .form__title Get consultation
+        .form__fields
+            each field in ["name","tel","email","msg"]
+                .form__field
+                    include fields/index
+        .form__agree
+            include ../agree/index
+        button(type='submit').form__submit.btn3 submit
+
+#formContact
+    form(action="/php/ajax.php" method="post" ).form
+        .form__title Contact Us
+        .form__fields
+            each field in ["name","tel","email","msg"]
+                .form__field
+                    include fields/index
+        .form__agree
+            include ../agree/index
+        button(type='submit').form__submit.btn3 submit
+
+#formThanks
+    form(action="/php/ajax.php" method="post").form.form--thanks
+        .form__title Thank you
+        .form__sub Our specialists will get in touch with you as soon as possible.
+        button(type='button' data-fancybox-close).btn3.form__close okey

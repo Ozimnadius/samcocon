@@ -22,14 +22,24 @@ html(lang="ru")
         meta(name="theme-color" content="#ffffff")
     body
         .wrapper
-            //.wrapper__header
-            include blocks/pug/header
+
+            .wrapper__aside
+                include blocks/pug/aside
+
+            .wrapper__header
+                include blocks/pug/header
 
             .wrapper__content
                 block content
 
-            .wrapper__footer
+            .wrapper__footer#contacts.jsSection
                 include blocks/pug/footer
+
+        template#templates
+            include components/info/index
+            include components/forms/index
+
+
 
         .debug
             div
@@ -58,6 +68,7 @@ html(lang="ru")
                     div
                     div
                     div
+
 
 
 

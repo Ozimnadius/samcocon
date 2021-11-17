@@ -1,0 +1,66 @@
+.agree{
+  cursor: pointer;
+
+  &__input{
+    display: none;
+    &:checked+.agree__fake{
+      .agree{
+        &__check{
+          background: $blue;
+          svg{
+            display: block;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__fake{
+    display: flex;
+    gap: 15px;
+  }
+
+  &__check{
+    flex-shrink: 0;
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid $blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include lg-block{
+      width: 12px;
+      height: 12px;
+    }
+
+    svg{
+      opacity: 0;
+    }
+
+  }
+
+  &__content{
+    color: #acacac;
+    font-size: 14px;
+    @include lg-block{
+      font-size: 12px;
+    }
+
+    a {
+      color: $blue;
+      text-decoration: underline;
+
+      @include tr;
+      &:hover{
+        color: $yellow;
+      }
+    }
+
+
+  }
+}

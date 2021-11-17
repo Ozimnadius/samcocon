@@ -1,0 +1,37 @@
+.follow{
+
+  &__title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  &__list{
+    display: flex;
+    align-items: center;
+    margin: 0 -10px;
+  }
+
+  &__item{
+    padding: 10px;
+
+    &:hover{
+      svg{
+        path{
+          fill: $blue;
+          fill-opacity: 1;
+        }
+      }
+    }
+
+    svg{
+      path{
+        @include tr;
+        fill: $white;
+        fill-opacity: .5;
+      }
+    }
+  }
+
+
+}

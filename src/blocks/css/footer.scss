@@ -1,0 +1,207 @@
+.footer {
+  padding-bottom: 45px;
+  @media (max-width: 1919.98px) {
+    padding-top: 80px;
+  }
+  @include lg-block {
+    padding-bottom: 30px;
+  }
+  @include sm-block {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  &__top {
+    margin-bottom: 110px;
+    @include xlg-block {
+      margin-bottom: 80px;
+    }
+    @include lg-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      padding: 0 30px;
+      width: 300px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    @include xlg-block {
+      margin-bottom: 60px;
+    }
+    @include lg-block {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 6fr 6fr 8fr;
+    grid-gap: 110px;
+
+    @include xlg-block {
+      grid-template-columns: 7fr 6fr 8fr;
+      grid-gap: 60px;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 40px;
+    }
+  }
+
+  &__sub {
+    color: $white;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    @include xlg-block {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    @include lg-block {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__countries {
+    display: grid;
+    grid-gap: 45px;
+    @include xlg-block {
+      grid-gap: 40px;
+    }
+    @include lg-block {
+      grid-gap: 30px;
+    }
+  }
+
+  &__country {
+
+    .country {
+      @include lg-block {
+        font-size: 11px;
+      }
+
+      &:hover {
+        color: $white;
+      }
+
+      &__wrap {
+        cursor: text;
+        margin-bottom: 10px;
+        gap: 15px;
+        @include lg-block {
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+      }
+
+      &__pic {
+        @include lg-block {
+          width: 26px;
+        }
+      }
+
+      &__arr {
+        display: none;
+      }
+
+      &__drop {
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        border: none;
+        background: none;
+        padding: 0;
+        max-width: 340px;
+        @include lg-block {
+          max-width: initial;
+          width: initial;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &__content {
+        font-size: 15px;
+        color: $txt;
+        font-weight: 300;
+        @include lg-block {
+          font-size: 12px;
+        }
+
+        p {
+
+          b {
+            color: $txt;
+            font-weight: 600;
+          }
+        }
+
+        ul {
+          gap: 15px;
+          @include xlg-block {
+            gap: 10px;
+          }
+          @include lg-block {
+            gap: 5px;
+          }
+
+          li {
+            b {
+              color: $txt;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__ul {
+    font-size: 18px;
+    max-width: 329px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include lg-block {
+      font-size: 12px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copy {
+    color: #868995;
+    @include lg-block {
+      font-size: 10px;
+    }
+  }
+
+  &__policy {
+    color: #868995;
+    @include lg-block {
+      font-size: 10px;
+    }
+
+    a {
+      text-decoration: underline;
+      @include tr;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}

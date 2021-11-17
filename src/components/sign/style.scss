@@ -1,0 +1,54 @@
+.sign{
+
+  &__txt{
+    color: #acacac;
+    font-size: 18px;
+    margin-bottom: 15px;
+    @include xlg-block{
+      font-size: 17px;
+    }
+    @include lg-block{
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__fields{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+    @include lg-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__agree{
+    margin-bottom: 35px;
+    @include lg-block{
+      margin-bottom: 20px;
+    }
+  }
+
+  &__submit{
+    @include lg-block{
+      width: 90px;
+      height: 26px;
+      font-size: 11px;
+    }
+  }
+
+  .input{
+    @include lg-block{
+      font-size: 10px;
+      padding: 8px 0;
+    }
+
+    &--area{
+      @include lg-block{
+        height: 50px;
+      }
+    }
+  }
+
+}

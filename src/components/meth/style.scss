@@ -1,0 +1,211 @@
+.meth {
+  padding-top: 70px;
+  padding-bottom: 140px;
+  position: relative;
+  @include xlg-block {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  @include lg-block {
+    padding-bottom: 50px;
+  }
+  @include sm-block {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    @include lg-block {
+      transform: none;
+      left: initial;
+      right: -50px;
+      top: -20px;
+      width: 620px;
+    }
+    @include sm-block {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @include lg-block {
+      margin-bottom: 35px;
+    }
+
+    &-line {
+      width: 461px;
+    }
+  }
+
+  &__txt {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 160%;
+    max-width: 1140px;
+    margin-bottom: 80px;
+    @include xlg-block {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+    @include lg-block {
+      font-size: 16px;
+      margin-bottom: 70px;
+    }
+    @include sm-block{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__lines {
+    transform: translateX(-410px);
+    margin-bottom: 10px;
+    @include lg-block {
+      transform: none;
+      margin: 0 -200px;
+    }
+    @include sm-block {
+      display: none;
+    }
+
+    svg {
+      @include lg-block {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @include lg-block {
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 45px;
+      margin-left: 70px;
+      margin-right: 40px;
+      position: relative;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      counter-reset: li;
+    }
+
+    &:before{
+      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(40,194,215,0.55) 10%,rgba(67,164,185,1) 55%,rgba(26,201,212,0.78) 80%,rgba(12,197,255,0.58) 85%,rgba(125,185,232,0) 100%);
+      @include sm-block{
+        display: block;
+      }
+    }
+  }
+
+  &__col {
+    padding-right: 80px;
+    @include lg-block {
+      padding: 0;
+    }
+    @include sm-block {
+      padding-left: 40px;
+      position: relative;
+    }
+
+    &:before{
+      counter-increment: li;
+      content: "0"counter(li);
+      display: none;
+      position: absolute;
+      right: calc(100% + 40px);
+
+      color: $blue;
+      font-size: 16px;
+      font-weight: 500;
+      font-style: italic;
+
+      @include sm-block{
+        display: block;
+      }
+    }
+
+    &:after{
+      content: url("/images/content/meth/line.svg");
+      display: none;
+      position: absolute;
+      top: 0;
+      left: -30px;
+
+
+      @include sm-block{
+        display: block;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    min-height: 72px;
+    @include xlg-block {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    @include lg-block {
+      font-size: 18px;
+      margin-bottom: 20px;
+      min-height: 50px;
+    }
+    @include sm-block{
+      margin-bottom: 25px;
+      min-height: initial;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include sm-block{
+        gap: 10px;
+    }
+
+    li {
+      padding-left: 50px;
+      position: relative;
+      @include xlg-block {
+        font-size: 15px;
+      }
+      @include lg-block {
+        font-size: 12px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        // Style for "Rectangle"
+        width: 27px;
+        height: 2px;
+        background-image: linear-gradient(90deg, $blue 0%, rgba($blue, 0) 100%);
+      }
+    }
+  }
+
+}

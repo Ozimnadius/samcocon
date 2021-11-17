@@ -1,0 +1,117 @@
+.diffs {
+  padding-top: 145px;
+  padding-bottom: 60px;
+  background: url("/images/content/diffs/bg.png") right top no-repeat;
+  @include xlg-block {
+    padding-top: 100px;
+  }
+  @include lg-block {
+    background: none;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  @include sm-block {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    grid-gap: 90px;
+    align-items: baseline;
+    @include xlg-block {
+      grid-template-columns: 320px 1fr;
+      grid-gap: 80px;
+    }
+    @include lg-block {
+      grid-gap: 50px;
+      grid-template-columns: 200px 1fr;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 30px;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__sub {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    @include xlg-block {
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+    @include lg-block {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__txt {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 160%;
+    margin-bottom: 40px;
+    @include xlg-block {
+      font-size: 22px;
+    }
+    @include lg-block {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 70px;
+    @include xlg-block {
+      margin-bottom: 40px;
+    }
+    @include lg-block {
+      margin-bottom: 35px;
+    }
+    @include sm-block {
+      margin-bottom: 25px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px;
+    @include lg-block {
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+  }
+
+  &__col {
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 160%;
+      @include xlg-block {
+        font-size: 18px;
+      }
+      @include lg-block {
+        font-size: 12px;
+      }
+      @include sm-block {
+        font-size: 12px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,60 @@
+.spark-statue{
+  display: inline-block;
+  position: relative;
+
+  &__img{
+    position: relative;
+    transform: translateY(100px);
+    z-index: 2;
+    @include lg-block{
+        transform: none;
+    }
+  }
+
+  &__round{
+    position: absolute;
+    z-index: 1;
+    bottom: -62px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__svg{
+    svg{
+      display: block;
+      @include xlg-block{
+        width: 495px;
+        height: 495px;
+      }
+      @include lg-block{
+        width: 393px;
+        height: 393px;
+      }
+      @include sm-block{
+        width: 320px;
+        height: 320px;
+      }
+    }
+  }
+
+  &__flash-l{
+    position: absolute;
+    top: -30px;
+    left: -115px;
+    @include xlg-block{
+      width: 310px;
+      left: -95px;
+    }
+  }
+
+  &__flash-r{
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    @include xlg-block{
+      width: 310px;
+      top: -60px;
+      right: -60px;
+    }
+  }
+}

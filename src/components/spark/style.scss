@@ -1,0 +1,229 @@
+.spark {
+  height: 100vh;
+  position: relative;
+  @include lg-block {
+    height: initial;
+    padding-top: 250px;
+    padding-bottom: 20px;
+  }
+  @include sm-block {
+    padding-top: 400px;
+    padding-bottom: 90px;
+    background: none;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include lg-block {
+      display: none;
+    }
+
+
+    img {
+      max-width: initial;
+    }
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include xlg-block {
+      padding-top: 80px;
+    }
+    @include lg-block {
+      padding-top: 0;
+    }
+  }
+
+  &__system {
+    width: 1205px;
+    height: 560px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    @include xlg-block {
+      left: -150px;
+    }
+    @include lg-block {
+      display: none;
+    }
+  }
+
+  &__planet {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__planet-small {
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: -45px;
+  }
+
+  &__stars {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    right: 2px;
+    width: 155px;
+    height: 215px;
+    opacity: 0;
+  }
+
+  &__star-middle {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+
+  &__star-small {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+    @include sm-block {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__left {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__sub {
+    opacity: 0;
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 120%;
+    @include lg-block {
+      font-size: 24px;
+      opacity: 1;
+    }
+    @include sm-block {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 35px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+    @media (max-width: 1919.98px) {
+      margin-left: 120px;
+      padding-left: 20px;
+    }
+    @include lg-block {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+
+    &-line {
+      position: absolute;
+      right: 100%;
+      transform: translateX(-300px);
+      top: 35px;
+      @include lg-block {
+        display: none;
+      }
+    }
+
+    &-text {
+      font-size: 74px;
+      font-weight: 500;
+      line-height: 110%;
+      opacity: 0;
+      @include lg-block {
+        font-size: 50px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btn {
+    opacity: 0;
+    margin-left: 125px;
+    @media (max-width: 1919.98px) {
+      margin-left: 175px;
+    }
+    @include lg-block {
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
+
+  &__right {
+    position: relative;
+    z-index: 1;
+    padding-top: 135px;
+    @include lg-block {
+      padding-top: 180px;
+    }
+    @include sm-block{
+      padding: 0;
+    }
+  }
+
+  &__txt {
+    opacity: 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 171%;
+    position: relative;
+    z-index: 2;
+    @include lg-block {
+      opacity: 1;
+    }
+  }
+
+  &__statue {
+    width: 595px;
+    position: absolute;
+    right: calc(100% + 45px);
+    bottom: -115px;
+    @include xlg-block {
+      width: 495px;
+      bottom: 0;
+      right: calc(100% + 5px);
+    }
+    @include lg-block {
+      width: 393px;
+      right: 50%;
+      bottom: 35%;
+    }
+    @include sm-block {
+      width: 320px;
+      transform: translateX(50%);
+      bottom: calc(100% + 180px);
+    }
+  }
+}
+
+@import "planet/style";
+@import "statue/style";
+
+

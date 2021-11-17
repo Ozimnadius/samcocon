@@ -8,10 +8,27 @@
 
 //BLOCKS
 @import "blocks/css/header";
+@import "blocks/css/aside";
 @import "blocks/css/nav";
 @import "blocks/css/footer";
+@import "blocks/css/fancybox";
 
 //COMPONENTS
+@import "components/agree/style";
+@import "components/country/style";
+@import "components/diffs/style";
+@import "components/follow/style";
+@import "components/forms/style";
+@import "components/info/style";
+@import "components/meth/style";
+@import "components/plans/style";
+@import "components/scroll/style";
+@import "components/sign/style";
+@import "components/solution/style";
+@import "components/spark/style";
+@import "components/specs/style";
+@import "components/zeus/style";
+
 
 //PAGES
 @import "pages/style";

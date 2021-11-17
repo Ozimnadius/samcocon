@@ -1,0 +1,53 @@
+.nav {
+  display: grid;
+  grid-gap: 5px;
+
+  &__item {
+    position: relative;
+    padding: 10px 0;
+
+    &:hover {
+      .nav {
+        &__name {
+          color: $yellow;
+        }
+      }
+    }
+
+    &.active {
+      .nav {
+        &__name {
+          color: $blue;
+        }
+      }
+    }
+
+    &.active {
+      .nav {
+        &__svg {
+          right: 100%;
+        }
+
+        &__name {
+          transform: translateX(15px);
+        }
+      }
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 200px);
+    transform: translateY(-50%);
+    @include tr;
+  }
+
+  &__name {
+    display: block;
+    color: $txt;
+    font-size: 18px;
+    font-weight: 500;
+    @include tr;
+  }
+}

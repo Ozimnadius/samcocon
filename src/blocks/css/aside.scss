@@ -1,0 +1,49 @@
+.aside {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background-image: linear-gradient(0, #0f1b3b 0%, #060d1e 100%);
+  overflow: hidden;
+  padding: 50px 40px 170px 40px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 1919.98px) {
+    transform: translateX(-100%);
+    @include tr;
+  }
+  @include lg-block{
+    padding-bottom: 50px;
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: .5;
+    @include tr;
+    @media (max-width: 1919.98px) {
+      display: block;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__logo {
+    margin-bottom: auto;
+  }
+
+  &__nav {
+    margin-bottom: auto;
+  }
+
+}

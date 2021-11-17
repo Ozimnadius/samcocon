@@ -4,3 +4,7 @@
 // @prepros-append ../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js
 // @prepros-append ../node_modules/inputmask/dist/jquery.inputmask.min.js
 // @prepros-append ../node_modules/jquery-validation/dist/jquery.validate.js
+// @prepros-append ../node_modules/gsap/dist/gsap.js
+// @prepros-append ../node_modules/gsap/dist/ScrollTrigger.js
+// @prepros-append ../node_modules/gsap/dist/ScrollToPlugin.js
+// @prepros-append ../node_modules/ismobilejs/dist/isMobile.min.js

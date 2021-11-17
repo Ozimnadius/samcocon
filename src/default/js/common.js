@@ -32,10 +32,13 @@ const jsTools = {
 
 const media = {
     mobile: window.matchMedia("(max-width: 767.98px)"),
+    tablet: window.matchMedia("(max-width: 1279.98px)"),
+    note: window.matchMedia("(max-width: 1659.98px)"),
 }
 
 window.addEventListener("load", function () {
 
     $('.input[type="tel"]').inputmask("+7(999)999-99-99");
-
 });
+
+

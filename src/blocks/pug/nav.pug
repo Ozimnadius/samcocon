@@ -1,0 +1,41 @@
+-
+    var nav = [
+        {
+            name: "Home",
+            href:"#home"
+        },
+        {
+            name: "Basic plans",
+            href:"#plans"
+        },
+        {
+            name: "Our practice and experience",
+            href:"#exp"
+        },
+        {
+            name: "What Makes Us Different ",
+            href:"#diff"
+        },
+        {
+            name: "Methodology",
+            href:"#meth"
+        },
+        {
+            name: "Specialisations",
+            href:"#specs"
+        },
+        {
+            name: "Contacts",
+            href:"#contacts"
+        },
+
+    ]
+nav.nav
+    each i in nav
+        a(href=i.href).nav__item
+            span.nav__svg
+                <svg width="50" height="9" viewBox="0 0 50 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="45.5" cy="4.5" r="4" stroke="#2C9ADA"/>
+                <path d="M0 4.5L41 4.5" stroke="#2C9ADA"/>
+                </svg>
+            span.nav__name= i.name

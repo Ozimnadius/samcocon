@@ -6,17 +6,17 @@ smartgrid('./src/default/css', {
     offset: "20px",
     outputStyle: "scss",
     container: {
-        maxWidth: "1800px",
+        maxWidth: "1420px",
         fields: "20px",
     },
     breakPoints: {
         xlg: {
-            width: "1919.98px",
-            fields: "20px",
+            width: "1659.98px",
+            fields: "40px",
         },
         lg: {
             width: "1279.98px",
-            fields: "20px",
+            fields: "40px",
         },
         md: {
             width: "991.98px",
